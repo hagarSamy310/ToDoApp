@@ -46,7 +46,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: var(--bg-image) no-repeat center center/cover;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+	var(--bg-image) no-repeat center center/cover;
 	font-family: var(--font-family);
 	font-weight: 600;
 	color: var(--color-white);
@@ -232,12 +233,12 @@ input:-webkit-autofill:hover {
 }
 
 #tasks-list li button {
-	width: 30px;
-	height: 30px;
+	width: 36px;
+	height: 36px;
 	margin: 0 10px;
 	border: none;
 	border-radius: 50%;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	background: var(--color-input-bg);
 	color: var(--color-white);
 	cursor: pointer;
@@ -284,7 +285,8 @@ input:-webkit-autofill:hover {
 	margin-left: 3px;
 	padding: 10px;
 	width: 60%;
-	font-size: 1rem;
+	font-size: 1.1rem;
+	font-weight: bold;
 	border: none;
 	outline: none;
 	border-radius: var(--border-radius-input);
@@ -376,6 +378,10 @@ input:-webkit-autofill:hover {
 		height: 20px;
 		font-size: 0.625rem;
 	}
+	.edit-area {
+		font-size: 1rem;
+		padding: 5px 8px;
+		width: 50%;
+		font-weight: normal;
+	}
 }
-
-

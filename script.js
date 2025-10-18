@@ -155,8 +155,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	function updateTask(li, input) {
 		const span = document.createElement("span");
 		span.textContent = input.value;
+		// Updating completed tasks
+		if (li.querySelector(".task-check").checked) {
+			span.classList.add("completed");
+		}
 		li.replaceChild(span, input);
-
 		// Update in memory
 		const taskId = parseInt(li.dataset.taskId);
 		const index = existingTasks.findIndex((task) => task.id === taskId);
