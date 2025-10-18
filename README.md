@@ -4,7 +4,7 @@ A sleek and modern to-do list application built with vanilla JavaScript, HTML, a
 
 ## 📸 Screenshot
 
-![Screenshot](./Assets/Images/Screenshot-%20.jpeg)
+![Screenshot](./Assets/Images/Screenshot.jpeg)
 
 
 ##  Features
