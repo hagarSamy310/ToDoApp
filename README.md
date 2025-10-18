@@ -2,6 +2,19 @@
 
 A sleek and modern to-do list application built with vanilla JavaScript, HTML, and CSS. This project demonstrates core front-end development skills, including full CRUD functionality, DOM manipulation, and local storage for data persistence. It features a beautiful glassmorphism design that is fully responsive.
 
+## 📸 Screenshots
+
+**Home Page**
+![Home Screenshot](./Assets/Images/Screenshot-%20free%20day.jpeg)
+
+**Adding Tasks**
+![Adding Tasks](./Assets/Images/Screenshot_adding%20tasks.jpeg)
+
+**Tracking Progress**
+![Progress Screenshot](./Assets/Images/Screenshot-%20track%20progress.jpeg)
+
+**Completed All Tasks**
+![Completed Screenshot](./Assets/Images/Screenshot-%20celebrating%20goals.jpeg)
 
 ##  Features
 
@@ -40,4 +53,4 @@ This to-do list application goes beyond the basics and includes several key feat
   * **`tsparticles-confetti`**: An external library to create the celebration confetti effect.
 
 
-<a href="https://YOUR-LIVE-DEMO-LINK-HERE" target="_blank" rel="noopener noreferrer">Live Demo</a>
+[Live Demo](https://hstodolistapp.netlify.app/)  

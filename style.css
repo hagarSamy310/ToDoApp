@@ -283,6 +283,7 @@ input:-webkit-autofill:hover {
 .edit-area {
 	margin-left: 3px;
 	padding: 10px;
+	width: 60%;
 	font-size: 1rem;
 	border: none;
 	outline: none;
@@ -365,3 +366,16 @@ input:-webkit-autofill:hover {
 		font-size: 1rem;
 	}
 }
+
+@media (max-width: 327px) {
+	#tasks-list li {
+		font-size: 0.875rem;
+	}
+	#tasks-list li button {
+		width: 20px;
+		height: 20px;
+		font-size: 0.625rem;
+	}
+}
+
+
