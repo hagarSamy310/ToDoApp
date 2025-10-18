@@ -1,0 +1,367 @@
+/* =====================================
+  VARIABLES
+===================================== */
+:root {
+	/* Colors */
+	--color-white: #fff;
+	--color-text: #dbdbdb;
+	--color-placeholder: #bcbcbc;
+	--color-input-bg: rgba(255, 194, 209, 0.3);
+	--color-border: rgba(255, 255, 255, 0.18);
+	--color-shadow: rgba(0, 0, 0, 0.5);
+	--color-soft-pink: rgb(222, 168, 177);
+	--color-editing: #ffbf00;
+	--color-warning: #ff6f91;
+
+	/* Background */
+	--bg-image: url(./Assets/Images/eng-hkh-85m32vx-IE8-unsplash.jpg);
+
+	/* Effects */
+	--blur-strength: 10px;
+
+	/* Typography */
+	--font-family: "Baloo 2", serif;
+	--font-size-h1: 2rem;
+	--font-size-input: 1.1rem;
+	--font-size-btn: 0.75rem;
+
+	/* Layout */
+	--border-radius: 20px;
+	--border-radius-input: 22px;
+	--container-padding: 2rem;
+	--gap: 18px;
+}
+
+/* =====================================
+  GLOBAL STYLES
+===================================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--bg-image) no-repeat center center/cover;
+	font-family: var(--font-family);
+	font-weight: 600;
+	color: var(--color-white);
+}
+
+::selection {
+	color: var(--color-white);
+	background-color: var(--color-border);
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+/* =====================================
+  TODO APP
+===================================== */
+.todo-app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: var(--gap);
+	width: 100%;
+	max-width: 400px;
+	padding: var(--container-padding);
+	border: 3px solid var(--color-border);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 10px var(--color-shadow);
+	backdrop-filter: blur(var(--blur-strength));
+	position: relative;
+}
+
+h1 {
+	font-size: var(--font-size-h1);
+}
+
+/* =====================================
+  STATS SECTION
+===================================== */
+.stat-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+	padding: 15px 20px;
+	margin-bottom: 16px;
+	border: 2px solid var(--color-border);
+	border-radius: 10px;
+}
+
+.details > h3 {
+	font-size: 1.3rem;
+	color: var(--color-white);
+}
+
+#progress-bar {
+	width: 100%;
+	height: 7px;
+	background: var(--color-input-bg);
+	border-radius: 20px;
+	margin-top: 15px;
+	position: relative;
+}
+
+#progress {
+	width: 0%;
+	height: 100%;
+	border-radius: 20px;
+	background: var(--color-warning);
+	transition: width 0.3s ease;
+}
+
+#numbers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: var(--color-warning);
+	border: 2px solid var(--color-input-bg);
+	color: var(--color-white);
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+/* =====================================
+  INPUT AREA
+===================================== */
+.input-area {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.input-area input {
+	flex: 1;
+	padding: 10px 17px;
+	font-size: var(--font-size-input);
+	border: none;
+	outline: none;
+	border-radius: var(--border-radius-input);
+	background-color: var(--color-input-bg);
+	color: var(--color-text);
+	caret-color: var(--color-text);
+}
+
+.input-area input::placeholder {
+	color: var(--color-placeholder);
+}
+
+.input-area input:focus {
+	background-color: rgba(255, 194, 209, 0.45);
+	transition: background-color 0.2s ease;
+}
+
+/* Override browser autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+	-webkit-box-shadow: 0 0 0 30px var(--color-input-bg) inset !important;
+	-webkit-text-fill-color: var(--color-text) !important;
+	caret-color: var(--color-text);
+	transition: background-color 9999s ease-in-out 0s;
+}
+
+.input-area button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	padding: 8px;
+	border-radius: 50%;
+	cursor: pointer;
+	color: var(--color-white);
+	font-size: var(--font-size-btn);
+	background-color: var(--color-input-bg);
+	border: 2px solid var(--color-border);
+	transition: all 0.2s ease;
+}
+
+.input-area button:hover {
+	transform: scale(1.1);
+	background: var(--color-soft-pink);
+}
+
+/* =====================================
+  TASK LIST
+===================================== */
+#tasks-list {
+	width: 100%;
+}
+
+#tasks-list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 10px;
+	margin-bottom: 10px;
+	border-radius: 30px;
+	background: var(--color-input-bg);
+	font-size: 1.2rem;
+	position: relative;
+	transition: box-shadow 0.2s ease;
+}
+
+#tasks-list li:hover {
+	box-shadow: 0 0 10px var(--color-shadow);
+}
+
+#tasks-list li span {
+	flex: 1;
+	margin-left: 10px;
+	overflow-wrap: break-word;
+}
+
+#tasks-list li button {
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
+	border: none;
+	border-radius: 50%;
+	font-size: 0.8rem;
+	background: var(--color-input-bg);
+	color: var(--color-white);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+#tasks-list li button:hover {
+	transform: scale(1.2);
+}
+
+#tasks-list li .edit-btn:hover {
+	background: var(--color-editing);
+}
+
+#tasks-list li .delete-btn:hover {
+	background: var(--color-warning);
+}
+
+.task-check {
+	appearance: none;
+	min-width: 16px;
+	height: 16px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	background: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.task-check:checked {
+	background: var(--color-soft-pink);
+	transform: scale(1.1);
+}
+
+.completed {
+	text-decoration: 2px line-through;
+	opacity: 0.7;
+}
+
+/* =====================================
+  EDIT + WARNING
+===================================== */
+.edit-area {
+	margin-left: 3px;
+	padding: 10px;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	border-radius: var(--border-radius-input);
+	background-color: var(--color-input-bg);
+	color: var(--color-text);
+	caret-color: var(--color-text);
+}
+
+.warning-msg {
+	position: absolute;
+	top: 60px;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 1rem;
+	color: var(--color-white);
+	background-color: var(--color-warning);
+	box-shadow: 0 4px 10px var(--color-shadow);
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* =====================================
+  EMPTY IMAGE
+===================================== */
+.img-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.empty-img {
+	width: 70%;
+	height: auto;
+	margin: 0 auto;
+	filter: sepia(1) saturate(2) hue-rotate(300deg);
+	display: none;
+}
+
+/* =====================================
+  MEDIA QUERIES
+===================================== */
+@media (max-width: 409px) {
+	.input-area input {
+		padding: 10px 15px;
+		width: 50vw;
+		font-size: 1rem;
+	}
+
+	.input-area input::placeholder {
+		font-size: 1rem;
+	}
+
+	.stat-container {
+		flex-direction: column;
+	}
+
+	#numbers {
+		width: 50px;
+		height: 50px;
+		font-size: 1rem;
+	}
+
+	.details h3 {
+		font-size: 1.2rem;
+	}
+
+	#tasks-list li {
+		font-size: 1rem;
+	}
+}
