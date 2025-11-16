@@ -25,7 +25,7 @@ This to-do list application goes beyond the basics and includes several key feat
 
   * **Responsive Design**: The application is fully responsive and looks great on all devices.
 
-    * **Theme Customization**: Toggle between +10 different background images using the theme toggle button 🎨 & saving user preferences. 
+  * **Theme Customization**: Toggle between +10 different background images using the theme toggle button 🎨 & saving user preferences. 
 
   * **User-Friendly Warnings**: A non-intrusive popup message prevents users from adding or saving empty tasks.
 
