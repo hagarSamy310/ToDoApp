@@ -6,24 +6,20 @@
 	--color-white: #fff;
 	--color-text: #fbf7f7;
 	--color-placeholder: #dcdada;
-	--color-input-bg: #ffbec84d;
+	--color-input-bg: hsla(351, 100%, 87%, 0.302);
 	--color-border: rgba(255, 255, 255, 0.18);
 	--color-shadow: rgba(0, 0, 0, 0.5);
 	--color-soft-pink: rgb(196, 116, 129);
 	--color-editing: #f29900;
-	--color-warning: #d47496;
-
-	/* Background */
-	--bg-image: url(./Assets/Images/4.webp);
 
 	/* Effects */
-	--blur-strength: 5px;
+	--blur-strength: 6px;
 
 	/* Typography */
 	--font-family: "Baloo 2", serif;
 	--font-size-base: clamp(0.9rem, 1.5vw, 1.5rem);
-	--font-size-h1: clamp(1.5rem, 1.5vw, 2.1rem);
-	--font-size-h2: clamp(1rem, 1.5vw, 1.6rem);
+	--font-size-h1: clamp(1.5rem, 1.5vw, 2rem);
+	--font-size-h2: clamp(1.2rem, 1.5vw, 1.7rem);
 	--font-size-input: clamp(0.9rem, 1.5vw, 1.5rem);
 	--font-size-btn: clamp(0.7rem, 1vw, 1.2rem);
 
@@ -48,8 +44,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		var(--bg-image) no-repeat center center/cover;
 	font-family: var(--font-family);
 	font-weight: 500;
 	color: var(--color-white);
@@ -127,6 +121,8 @@ h1 {
 	font-size: var(--font-size-h2);
 	color: var(--color-white);
 	font-weight: 500;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 #progress-bar {
@@ -141,7 +137,7 @@ h1 {
 	width: 0%;
 	height: 100%;
 	border-radius: 20px;
-	background: var(--color-warning);
+	background: var(--color-soft-pink);
 	transition: width 0.3s ease;
 }
 
@@ -152,7 +148,7 @@ h1 {
 	width: 3.5rem;
 	height: 3.5rem;
 	border-radius: 50%;
-	background-color: var(--color-warning);
+	background-color: var(--color-soft-pink);
 	border: 2px solid var(--color-input-bg);
 	color: var(--color-white);
 	font-weight: bold;
@@ -177,10 +173,10 @@ h1 {
 	width: 110px;
 	text-align: center;
 	padding: 2px;
-	background: var(--color-white);
-	color: var(--color-warning);
+	background: var(--color-soft-pink);
+	color: var(--color-white);
 	font-weight: bold;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	border-radius: 6px;
 	white-space: nowrap;
 	pointer-events: none;
@@ -305,7 +301,7 @@ input:-webkit-autofill:hover {
 }
 
 #tasks-list li .delete-btn:hover {
-	background: var(--color-warning);
+	background: var(--color-soft-pink);
 }
 
 .task-check {
@@ -330,7 +326,7 @@ input:-webkit-autofill:hover {
 }
 
 /* =====================================
-  EDIT + WARNING
+  EDIT
 ===================================== */
 .edit-area {
 	margin-left: 3px;
