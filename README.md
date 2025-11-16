@@ -4,7 +4,7 @@ A sleek and modern to-do list application built with vanilla JavaScript, HTML, a
 
 ## 📸 Screenshot
 
-![Screenshot](./Assets/Images/Screenshot.jpeg)
+![Screenshot](./Assets/Screenshots/ToDo%20List-%20Screen1.png)
 
 
 ##  Features
@@ -24,6 +24,8 @@ This to-do list application goes beyond the basics and includes several key feat
   * **Celebration Animation**: A fun confetti effect triggers upon completing all tasks, providing a satisfying sense of accomplishment. 
 
   * **Responsive Design**: The application is fully responsive and looks great on all devices.
+
+    * **Background Customization**: Toggle between different background images using the theme button 🎨 
 
   * **User-Friendly Warnings**: A non-intrusive popup message prevents users from adding or saving empty tasks.
 
