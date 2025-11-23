@@ -1,6 +1,4 @@
-/* =====================================
-  VARIABLES
-===================================== */
+/* VARIABLES */
 :root {
 	/* Colors */
 	--color-white: #fff;
@@ -17,11 +15,11 @@
 
 	/* Typography */
 	--font-family: "Baloo 2", serif;
-	--font-size-base: clamp(0.9rem, 1.5vw, 1.5rem);
-	--font-size-h1: clamp(1.5rem, 1.5vw, 2rem);
-	--font-size-h2: clamp(1.2rem, 1.5vw, 1.7rem);
-	--font-size-input: clamp(0.9rem, 1.5vw, 1.5rem);
-	--font-size-btn: clamp(0.7rem, 1vw, 1.2rem);
+	--font-size-base: clamp(0.9rem, 0.85rem + 0.25vw, 1.5rem);
+	--font-size-h1: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+	--font-size-h2: clamp(1.2rem, 1.15rem + 0.5vw, 1.7rem);
+	--font-size-input: clamp(1rem, 0.95rem + 0.25vw, 1.5rem);
+	--font-size-btn: clamp(0.75rem, 0.7rem + 0.25vw, 1.2rem);
 
 	/* Layout */
 	--border-radius: 20px;
@@ -30,20 +28,22 @@
 	--gap: 1.125rem;
 }
 
-/* =====================================
-  GLOBAL STYLES
-===================================== */
+/* GLOBAL STYLES */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+button, input {
+	-webkit-tap-highlight-color: transparent;
+}
+
 body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: 100svh;
 	font-family: var(--font-family);
 	font-weight: 500;
 	color: var(--color-white);
@@ -59,13 +59,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 100%;
 	padding: var(--container-padding);
 }
 
-/* =====================================
-  TODO APP
-===================================== */
+/* TODO APP */
 .todo-app {
 	display: flex;
 	flex-direction: column;
@@ -80,7 +77,6 @@ body {
 	box-shadow: 0 0 10px var(--color-shadow);
 	backdrop-filter: blur(var(--blur-strength));
 }
-
 
 header {
 	display: flex;
@@ -102,9 +98,7 @@ h1 {
 	font-size: 1.4rem;
 }
 
-/* =====================================
-  STATS SECTION
-===================================== */
+/* STATS SECTION */
 .stat-container {
 	display: flex;
 	justify-content: space-between;
@@ -155,9 +149,7 @@ h1 {
 	font-size: var(--font-size-base);
 }
 
-/* =====================================
-  INPUT AREA
-===================================== */
+/* INPUT AREA */
 .input-area {
 	display: flex;
 	align-items: center;
@@ -247,12 +239,12 @@ input:-webkit-autofill:hover {
 	background: var(--color-soft-pink);
 }
 
-/* =====================================
-  TASK LIST
-===================================== */
+/* TASK LIST */
 #tasks-list {
 	width: 100%;
 	list-style: none;
+	max-height: 300px;
+	overflow-y: auto;
 }
 
 #tasks-list li {
@@ -325,9 +317,7 @@ input:-webkit-autofill:hover {
 	opacity: 0.7;
 }
 
-/* =====================================
-  EDIT
-===================================== */
+/* EDIT */
 .edit-area {
 	margin-left: 3px;
 	padding: 4px 8px;
@@ -342,9 +332,7 @@ input:-webkit-autofill:hover {
 	caret-color: var(--color-text);
 }
 
-/* =====================================
-  EMPTY IMAGE
-===================================== */
+/* FREE DAY IMAGE */
 .img-container {
 	display: flex;
 	justify-content: center;
@@ -359,10 +347,7 @@ input:-webkit-autofill:hover {
 	display: none;
 }
 
-/* =====================================
-  MEDIA QUERIES
-===================================== */
-
+/* MEDIA QUERIES */
 @media (max-width: 400px) {
 	.stat-container {
 		flex-direction: column;
