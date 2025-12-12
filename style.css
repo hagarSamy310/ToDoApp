@@ -72,6 +72,7 @@ body {
 	gap: var(--gap);
 	width: 100%;
 	max-width: 400px;
+	max-height: 90vh;
 	padding: 1.5rem 2rem;
 	border: 3px solid var(--color-border);
 	border-radius: var(--border-radius);
@@ -242,17 +243,21 @@ input:-webkit-autofill:hover {
 
 /* TASK LIST */
 #tasks-list {
-	width: 100%;
+	width: 98%;
 	list-style: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-width: none;
 }
 
 #tasks-list li {
 	display: flex;
+	width: 100%;
 	align-items: center;
 	justify-content: space-between;
 	padding: 8px 10px;
 	margin-bottom: 14px;
-	border-radius: 30px;
+	border-radius: 8px;
 	background: var(--color-input-bg);
 	font-size: var(--font-size-base);
 	transition: box-shadow 0.2s ease;
@@ -260,7 +265,7 @@ input:-webkit-autofill:hover {
 }
 
 #tasks-list li:hover {
-	box-shadow:  inset 0px 0px 5px var(--color-shadow);
+	box-shadow:  inset 0px 0px 4px var(--color-shadow);
 }
 
 #tasks-list li span {
