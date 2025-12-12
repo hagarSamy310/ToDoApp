@@ -42,7 +42,7 @@ button, input {
 body {
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	min-height: 100vh;
 	min-height: 100svh;
 	font-family: var(--font-family);
